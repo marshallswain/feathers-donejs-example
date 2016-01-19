@@ -6,7 +6,6 @@ import io from 'steal-socket.io';
 let token = window.localStorage && window.localStorage.getItem('authToken'),
   query,
   url = 'feathers-donejs.herokuapp.com',
-  socket,
   socketConfig = {
     transports:['websocket']
   };
@@ -14,10 +13,10 @@ let token = window.localStorage && window.localStorage.getItem('authToken'),
 if (token) {
   socketConfig.query = 'token=' + token;
 }
-socket = io(url, socketConfig)
-
+let socket = io(url, socketConfig)
+console.log('socket', socket);
 const app = feathers()
   .configure(socketio(socket))
-  .configure(hooks());
+  // .configure(hooks());
 
 export {app, socket};

@@ -44,7 +44,7 @@
     "done-component": "^0.4.0",
     "done-css": "~1.1.13",
     "generator-donejs": "^0.4.3",
-    "feathers": "2.0.0-pre.2",
+    "feathers": "marshallswain/feathers",
     "feathers-hooks": "1.0.0-pre.2",
     "feathers-socketio": "1.1.0",
     "jquery": "2.1.4",

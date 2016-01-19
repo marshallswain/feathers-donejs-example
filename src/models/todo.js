@@ -6,10 +6,11 @@ import {app, socket} from 'feathers-donejs/models/feathers';
 
 var service = app.service('todos');
 window.service = service;
-console.log('todo.js service.find')
-service.find().then(function(data){
-  console.log('todo.js data', data);
-});
+// console.log('todo.js service.find')
+// service.find();
+// service.find().then(function(data){
+//   console.log('todo.js data', data);
+// });
 
 export const Todo = can.Map.extend({
   define: {}

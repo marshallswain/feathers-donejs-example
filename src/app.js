@@ -19,7 +19,7 @@ const AppViewModel = AppMap.extend({
     todos: {
       get(){
         return Todo.findAll().then(function(data){
-          console.log('app.js response to Todo.findAll()', data);
+          console.log('app.js response to Todo.findAll():', data);
           return data;
         }, function(error){
           console.log(error);
